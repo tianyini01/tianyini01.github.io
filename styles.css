@@ -303,9 +303,9 @@ h3 {
 
 .featured-item {
   display: grid;
-  grid-template-columns: minmax(220px, 0.36fr) minmax(0, 1fr);
-  gap: 1.25rem;
-  padding: 1rem 0;
+  grid-template-columns: minmax(240px, 0.34fr) minmax(0, 1fr);
+  gap: clamp(1.25rem, 3vw, 2rem);
+  padding: 1.25rem 0;
   border-bottom: 1px solid var(--line);
 }
 
@@ -314,8 +314,11 @@ h3 {
 }
 
 .featured-item p {
+  max-width: 680px;
   margin-bottom: 0;
   color: #3c4139;
+  font-size: 0.97rem;
+  line-height: 1.65;
 }
 
 .featured-item .item-links {
