@@ -357,6 +357,19 @@ h3 {
   margin-bottom: 1.15rem;
 }
 
+.primary-program {
+  border-top-color: var(--ink);
+  border-top-width: 2px;
+}
+
+.primary-program h2 {
+  font-size: clamp(1.55rem, 3vw, 2.35rem);
+}
+
+.methods-program h2 {
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+}
+
 .research-program > p {
   max-width: 780px;
   color: #30342e;
