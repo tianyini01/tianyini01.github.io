@@ -128,23 +128,29 @@ a:hover {
 
 .intro {
   display: grid;
-  grid-template-columns: 132px minmax(0, 1fr);
-  gap: clamp(1.35rem, 4vw, 2.4rem);
+  grid-template-columns: 168px minmax(0, 1fr);
+  gap: clamp(1.35rem, 3vw, 2.1rem);
   align-items: start;
-  padding: clamp(3rem, 7vw, 5.5rem) 0 clamp(2.8rem, 6vw, 4.5rem);
+  padding: clamp(2.4rem, 5vw, 4rem) 0 clamp(2.2rem, 5vw, 3.4rem);
 }
 
-.intro-avatar {
-  width: 132px;
-  height: 132px;
-  border-radius: 50%;
-  object-fit: cover;
+.intro-copy,
+.news-item > div,
+.course-line > div,
+.related-work li {
+  min-width: 0;
+}
+
+.intro-photo {
+  width: 168px;
+  border-radius: 6px;
+  box-shadow: 0 8px 22px rgba(20, 22, 18, 0.08);
 }
 
 .kicker {
   margin: 0 0 0.65rem;
   color: var(--accent-warm);
-  font-size: 0.76rem;
+  font-size: 0.72rem;
   font-weight: 780;
   letter-spacing: 0.08em;
   line-height: 1.25;
@@ -166,9 +172,9 @@ h2 {
 }
 
 h1 {
-  margin-bottom: 1rem;
+  margin-bottom: 0.85rem;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2.55rem, 8vw, 5.25rem);
+  font-size: clamp(1.9rem, 4.2vw, 3.1rem);
   font-weight: 500;
 }
 
@@ -176,7 +182,7 @@ h2 {
   max-width: 760px;
   margin-bottom: 0;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(1.75rem, 4vw, 3rem);
+  font-size: clamp(1.25rem, 2.3vw, 1.8rem);
   font-weight: 500;
 }
 
@@ -188,9 +194,18 @@ h3 {
 
 .lead {
   max-width: 680px;
-  margin-bottom: 1.35rem;
+  margin-bottom: 0.8rem;
   color: #323530;
-  font-size: clamp(1.06rem, 2vw, 1.25rem);
+  font-size: 1rem;
+  line-height: 1.62;
+}
+
+.lead-secondary {
+  max-width: 680px;
+  margin-bottom: 1.25rem;
+  color: #454942;
+  font-size: 0.98rem;
+  line-height: 1.62;
 }
 
 .inline-links,
@@ -216,7 +231,7 @@ h3 {
 .news-section,
 .compact-section,
 .research-program {
-  padding: clamp(2.4rem, 6vw, 4.5rem) 0;
+  padding: clamp(2rem, 4.5vw, 3.4rem) 0;
   border-top: 1px solid var(--line);
 }
 
@@ -466,20 +481,18 @@ h3 {
     padding-bottom: 0.1rem;
   }
 
-.intro {
+  .intro {
     grid-template-columns: 1fr;
-}
+  }
 
-.intro-copy,
-.news-item > div,
-.course-line > div,
-.related-work li {
-  min-width: 0;
-}
+  .intro-photo {
+    width: 124px;
+  }
 
-  .intro-avatar {
-    width: 96px;
-    height: 96px;
+  .lead,
+  .lead-secondary {
+    max-width: min(100%, 32ch);
+    font-size: 0.96rem;
   }
 
   .news-item,
