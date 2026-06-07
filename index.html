@@ -84,7 +84,7 @@
             <time datetime="2026-06-26">Upcoming · June 26–28, 2026</time>
             <div>
               <p>
-                I will attend LabPhon 20 in Montréal and give a talk,
+                I will attend <strong>LabPhon 20</strong> in Montréal and give a talk,
                 <em>Equilibrium dynamics of near-merger: Functional load and contrast persistence</em>.
               </p>
               <p class="news-links">
@@ -100,7 +100,7 @@
               <p>
                 I presented
                 <em>Fossilized Prefixes, Living Compounds? Productivity and Semantic Shift in Khmer Word Formation</em>
-                at SEALS 35 in Singapore.
+                at <strong>SEALS 35</strong> in Singapore.
               </p>
               <p class="news-links">
                 <a href="files/2026_seals_khmer_prefixation_slides.pdf">Slides</a>
@@ -114,8 +114,8 @@
             <time datetime="2026-05-29">May 2026</time>
             <div>
               <p>
-                I presented a poster on Cantonese tone near-merger at Speech
-                Prosody 2026 in Philadelphia.
+                I presented a poster on Cantonese tone near-merger at
+                <strong>Speech Prosody 2026</strong> in Philadelphia.
               </p>
               <p class="news-links">
                 <a href="files/2026_speech_prosody_near_merger_poster.pdf">Poster</a>
@@ -289,7 +289,8 @@
         {
           src: "photos/nyhavn-copenhagen.jpg",
           location: "Nyhavn, København, Denmark",
-          position: "80% center"
+          position: "center",
+          fit: "contain"
         },
         {
           src: "photos/fishmarket-bergen.jpg",
@@ -316,6 +317,7 @@
       introPhoto.src = selectedPhoto.src;
       introPhoto.alt = `Tianyi Ni at ${selectedPhoto.location}`;
       introPhoto.style.objectPosition = selectedPhoto.position;
+      introPhoto.style.objectFit = selectedPhoto.fit || "cover";
       introLocation.textContent = `Location: ${selectedPhoto.location}`;
     </script>
   </body>
