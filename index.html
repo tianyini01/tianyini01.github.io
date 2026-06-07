@@ -274,7 +274,8 @@
         {
           src: "photos/museum-katowice.jpeg",
           location: "Museum of Katowice, Katowice, Poland",
-          position: "center"
+          position: "center",
+          zoom: 1.22
         },
         {
           src: "photos/mozart-geburtshaus.jpeg",
@@ -295,7 +296,8 @@
         {
           src: "photos/fishmarket-bergen.jpg",
           location: "Fishmarket in Bergen, Norway",
-          position: "78% center"
+          position: "center",
+          fit: "contain"
         },
         {
           src: "photos/exit-to-iceland-reykjavik.jpg",
@@ -318,6 +320,10 @@
       introPhoto.alt = `Tianyi Ni at ${selectedPhoto.location}`;
       introPhoto.style.objectPosition = selectedPhoto.position;
       introPhoto.style.objectFit = selectedPhoto.fit || "cover";
+      introPhoto.style.transform = selectedPhoto.zoom
+        ? `scale(${selectedPhoto.zoom})`
+        : "none";
+      introPhoto.style.transformOrigin = selectedPhoto.position;
       introLocation.textContent = `Location: ${selectedPhoto.location}`;
     </script>
   </body>
