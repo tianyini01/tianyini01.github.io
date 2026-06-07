@@ -16,7 +16,7 @@
     <header class="site-header">
       <nav class="nav-shell" aria-label="Primary navigation">
         <a class="brand" href="index.html" aria-label="Tianyi Ni home">
-          <img class="brand-avatar" src="tianyi-headshot.jpeg" alt="">
+          <img class="brand-avatar" src="profile-headshot.jpeg" alt="">
           <span>Tianyi Ni</span>
         </a>
         <div class="nav-links">
@@ -105,6 +105,7 @@
               <p class="news-links">
                 <a href="files/2026_seals_khmer_prefixation_slides.pdf">Slides</a>
                 <a href="files/2026_seals_khmer_prefixation_abstract.pdf">Abstract</a>
+                <span>Paper (Manu.) forthcoming</span>
               </p>
             </div>
           </li>
@@ -229,6 +230,7 @@
             <p class="item-links">
               <a href="files/2026_seals_khmer_prefixation_slides.pdf">Slides</a>
               <a href="files/2026_seals_khmer_prefixation_abstract.pdf">Abstract</a>
+              <span>Paper (Manu.) forthcoming</span>
             </p>
           </article>
         </div>
@@ -257,8 +259,7 @@
         {
           src: "photos/reynisfjara-beach.jpeg",
           location: "Reynisfjara Beach, Iceland",
-          position: "68% center",
-          zoom: 1.12
+          position: "68% center"
         },
         {
           src: "photos/cite-architecture-patrimoine.jpeg",
@@ -273,8 +274,7 @@
         {
           src: "photos/museum-katowice.jpeg",
           location: "Museum of Katowice, Katowice, Poland",
-          position: "center",
-          zoom: 1.42
+          position: "center"
         },
         {
           src: "photos/mozart-geburtshaus.jpeg",
@@ -284,32 +284,27 @@
         {
           src: "photos/kastellet-copenhagen.jpg",
           location: "Kastellet, København, Denmark",
-          position: "58% center",
-          zoom: 1.28
+          position: "58% center"
         },
         {
           src: "photos/nyhavn-copenhagen.jpg",
           location: "Nyhavn, København, Denmark",
-          position: "80% center",
-          zoom: 1.52
+          position: "80% center"
         },
         {
           src: "photos/fishmarket-bergen.jpg",
           location: "Fishmarket in Bergen, Norway",
-          position: "78% center",
-          zoom: 1.16
+          position: "78% center"
         },
         {
           src: "photos/exit-to-iceland-reykjavik.jpg",
           location: "Exit to Iceland, Reykjavík, Iceland",
-          position: "70% center",
-          zoom: 1.2
+          position: "70% center"
         },
         {
           src: "photos/rainbow-street-reykjavik.jpg",
           location: "Skólavörðustígur Rainbow Street, Reykjavík, Iceland",
-          position: "30% center",
-          zoom: 1.2
+          position: "30% center"
         }
       ];
 
@@ -321,10 +316,6 @@
       introPhoto.src = selectedPhoto.src;
       introPhoto.alt = `Tianyi Ni at ${selectedPhoto.location}`;
       introPhoto.style.objectPosition = selectedPhoto.position;
-      introPhoto.style.transform = selectedPhoto.zoom
-        ? `scale(${selectedPhoto.zoom})`
-        : "scale(1)";
-      introPhoto.style.transformOrigin = selectedPhoto.position;
       introLocation.textContent = `Location: ${selectedPhoto.location}`;
     </script>
   </body>
