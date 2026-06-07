@@ -31,12 +31,14 @@
     <main id="main">
       <section class="intro section-shell">
         <figure class="intro-figure">
-          <img
-            id="intro-photo"
-            class="intro-photo"
-            src="tianyi1.jpeg"
-            alt="Tianyi Ni at The Ohio State Reformatory, Mansfield, OH"
-          >
+          <span class="intro-photo-frame">
+            <img
+              id="intro-photo"
+              class="intro-photo"
+              src="tianyi1.jpeg"
+              alt="Tianyi Ni at The Ohio State Reformatory, Mansfield, OH"
+            >
+          </span>
           <figcaption id="intro-location">
             Location: The Ohio State Reformatory, Mansfield, OH
           </figcaption>
@@ -116,7 +118,7 @@
               </p>
               <p class="news-links">
                 <a href="files/2026_speech_prosody_near_merger_poster.pdf">Poster</a>
-                <a href="files/2026_speech_prosody_near_merger_proceeding.pdf">Conference proceeding</a>
+                <a href="files/2026_speech_prosody_near_merger_proceeding.pdf">Paper (Proc.)</a>
               </p>
             </div>
           </li>
@@ -201,7 +203,7 @@
             </p>
             <p class="item-links">
               <a href="files/2026_speech_prosody_near_merger_poster.pdf">Poster</a>
-              <a href="files/2026_speech_prosody_near_merger_proceeding.pdf">Proceeding</a>
+              <a href="files/2026_speech_prosody_near_merger_proceeding.pdf">Paper (Proc.)</a>
               <a href="files/2026_labphon20_near_merger_abstract.pdf">Abstract</a>
             </p>
           </article>
@@ -255,7 +257,8 @@
         {
           src: "photos/reynisfjara-beach.jpeg",
           location: "Reynisfjara Beach, Iceland",
-          position: "68% center"
+          position: "68% center",
+          zoom: 1.12
         },
         {
           src: "photos/cite-architecture-patrimoine.jpeg",
@@ -270,7 +273,8 @@
         {
           src: "photos/museum-katowice.jpeg",
           location: "Museum of Katowice, Katowice, Poland",
-          position: "center"
+          position: "center",
+          zoom: 1.42
         },
         {
           src: "photos/mozart-geburtshaus.jpeg",
@@ -280,27 +284,32 @@
         {
           src: "photos/kastellet-copenhagen.jpg",
           location: "Kastellet, København, Denmark",
-          position: "54% center"
+          position: "58% center",
+          zoom: 1.28
         },
         {
           src: "photos/nyhavn-copenhagen.jpg",
           location: "Nyhavn, København, Denmark",
-          position: "72% center"
+          position: "80% center",
+          zoom: 1.52
         },
         {
           src: "photos/fishmarket-bergen.jpg",
           location: "Fishmarket in Bergen, Norway",
-          position: "76% center"
+          position: "78% center",
+          zoom: 1.16
         },
         {
           src: "photos/exit-to-iceland-reykjavik.jpg",
           location: "Exit to Iceland, Reykjavík, Iceland",
-          position: "66% center"
+          position: "70% center",
+          zoom: 1.2
         },
         {
           src: "photos/rainbow-street-reykjavik.jpg",
           location: "Skólavörðustígur Rainbow Street, Reykjavík, Iceland",
-          position: "26% center"
+          position: "30% center",
+          zoom: 1.2
         }
       ];
 
@@ -312,6 +321,10 @@
       introPhoto.src = selectedPhoto.src;
       introPhoto.alt = `Tianyi Ni at ${selectedPhoto.location}`;
       introPhoto.style.objectPosition = selectedPhoto.position;
+      introPhoto.style.transform = selectedPhoto.zoom
+        ? `scale(${selectedPhoto.zoom})`
+        : "scale(1)";
+      introPhoto.style.transformOrigin = selectedPhoto.position;
       introLocation.textContent = `Location: ${selectedPhoto.location}`;
     </script>
   </body>
