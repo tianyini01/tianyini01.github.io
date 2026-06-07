@@ -531,7 +531,7 @@ h3 {
 .teaching-group {
   display: grid;
   grid-template-columns: minmax(220px, 0.36fr) minmax(0, 1fr);
-  gap: 1.25rem;
+  gap: 1.5rem;
   padding: 1.15rem 0;
   border-bottom: 1px solid var(--line);
 }
@@ -539,24 +539,25 @@ h3 {
 .teaching-group h3 {
   margin-bottom: 0;
   color: var(--ink);
+  font-size: 1rem;
 }
 
-.teaching-group ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.teaching-courses {
+  min-width: 0;
 }
 
-.teaching-group li + li {
-  margin-top: 0.85rem;
+.teaching-course + .teaching-course {
+  margin-top: 0.9rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--line);
 }
 
-.teaching-group strong,
-.teaching-group span {
+.teaching-course strong,
+.teaching-course span {
   display: block;
 }
 
-.teaching-group span {
+.teaching-course span {
   margin-top: 0.18rem;
   color: var(--muted);
   font-size: 0.95rem;
