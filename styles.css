@@ -136,13 +136,13 @@ a:hover {
 
 .intro-copy,
 .news-item > div,
-.course-line > div,
 .related-work li {
   min-width: 0;
 }
 
 .intro-photo {
   width: 168px;
+  margin-top: 1.75rem;
   border-radius: 6px;
   box-shadow: 0 8px 22px rgba(20, 22, 18, 0.08);
 }
@@ -335,26 +335,6 @@ h3 {
   border-top: 1px solid var(--line);
 }
 
-.upcoming-note {
-  margin-bottom: 1rem;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  padding: 1rem 0;
-}
-
-.upcoming-note time {
-  display: block;
-  margin-bottom: 0.35rem;
-  color: var(--accent-warm);
-  font-size: 0.9rem;
-  font-weight: 760;
-}
-
-.upcoming-note p {
-  max-width: 760px;
-  margin-bottom: 0.35rem;
-}
-
 .news-item {
   display: grid;
   grid-template-columns: 170px minmax(0, 1fr);
@@ -375,47 +355,6 @@ h3 {
 
 .plain-action {
   margin: 1.1rem 0 0;
-}
-
-.course-line {
-  display: grid;
-  grid-template-columns: 110px minmax(0, 1fr);
-  gap: 1.1rem;
-  padding: 1rem 0;
-  border-top: 1px solid var(--line);
-}
-
-.course-line:last-child {
-  border-bottom: 1px solid var(--line);
-}
-
-.course-line > span {
-  color: var(--accent-warm);
-  font-size: 0.9rem;
-  font-weight: 760;
-}
-
-.course-line p {
-  margin-bottom: 0;
-  color: var(--muted);
-}
-
-.teaching-list {
-  max-width: 780px;
-  margin: 1rem 0 0;
-  padding: 0;
-  border-top: 1px solid var(--line);
-  list-style: none;
-}
-
-.teaching-list li {
-  padding: 0.75rem 0;
-  border-bottom: 1px solid var(--line);
-  color: var(--muted);
-}
-
-.teaching-list strong {
-  color: var(--ink);
 }
 
 .page-hero {
@@ -596,6 +535,7 @@ h3 {
 
   .intro-photo {
     width: 124px;
+    margin-top: 0;
   }
 
   .lead,
@@ -605,7 +545,6 @@ h3 {
   }
 
   .news-item,
-  .course-line,
   .featured-item,
   .fact-list div,
   .plain-list li,
