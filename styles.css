@@ -352,6 +352,11 @@ h3 {
   font-weight: 680;
 }
 
+.news-item.is-upcoming time {
+  color: var(--accent-warm);
+  font-weight: 760;
+}
+
 .news-item p {
   margin-bottom: 0.35rem;
 }
