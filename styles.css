@@ -1,0 +1,511 @@
+:root {
+  --bg: #fbfbf8;
+  --ink: #171815;
+  --muted: #6b6f67;
+  --soft: #eeeee8;
+  --line: #dcded6;
+  --accent: #2e6d64;
+  --accent-warm: #8a4b2f;
+  --max: 920px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.68;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: var(--accent);
+  font-weight: 650;
+  text-decoration-color: rgba(46, 109, 100, 0.28);
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  color: var(--accent-warm);
+  text-decoration-color: rgba(138, 75, 47, 0.38);
+}
+
+:focus-visible {
+  outline: 2px solid rgba(46, 109, 100, 0.4);
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  z-index: 20;
+  transform: translateY(-160%);
+  background: var(--ink);
+  color: #fff;
+  padding: 0.45rem 0.7rem;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.section-shell {
+  width: min(var(--max), calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--line);
+  background: rgba(251, 251, 248, 0.92);
+  backdrop-filter: blur(16px);
+}
+
+.nav-shell {
+  width: min(var(--max), calc(100% - 40px));
+  min-height: 58px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--ink);
+  font-size: 0.95rem;
+  font-weight: 760;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.brand-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--muted);
+  font-size: 0.91rem;
+  white-space: nowrap;
+}
+
+.nav-links a {
+  color: var(--muted);
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.nav-links a:hover,
+.nav-links a[aria-current="page"] {
+  color: var(--ink);
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: 132px minmax(0, 1fr);
+  gap: clamp(1.35rem, 4vw, 2.4rem);
+  align-items: start;
+  padding: clamp(3rem, 7vw, 5.5rem) 0 clamp(2.8rem, 6vw, 4.5rem);
+}
+
+.intro-avatar {
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.kicker {
+  margin: 0 0 0.65rem;
+  color: var(--accent-warm);
+  font-size: 0.76rem;
+  font-weight: 780;
+  letter-spacing: 0.08em;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+  overflow-wrap: break-word;
+}
+
+h1,
+h2 {
+  line-height: 1.13;
+  letter-spacing: 0;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.55rem, 8vw, 5.25rem);
+  font-weight: 500;
+}
+
+h2 {
+  max-width: 760px;
+  margin-bottom: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  font-weight: 500;
+}
+
+h3 {
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.lead {
+  max-width: 680px;
+  margin-bottom: 1.35rem;
+  color: #323530;
+  font-size: clamp(1.06rem, 2vw, 1.25rem);
+}
+
+.inline-links,
+.news-links,
+.work-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 0.9rem;
+  align-items: center;
+}
+
+.inline-links a,
+.news-links a,
+.work-links a {
+  font-size: 0.94rem;
+}
+
+.news-links span {
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+.news-section,
+.compact-section,
+.research-program {
+  padding: clamp(2.4rem, 6vw, 4.5rem) 0;
+  border-top: 1px solid var(--line);
+}
+
+.section-title {
+  margin-bottom: 1.5rem;
+}
+
+.section-copy {
+  max-width: 720px;
+  color: #333631;
+  font-size: 1.03rem;
+}
+
+.news-list,
+.plain-list,
+.related-work ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.news-list {
+  border-top: 1px solid var(--line);
+}
+
+.upcoming-note {
+  margin-bottom: 1rem;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 1rem 0;
+}
+
+.upcoming-note time {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--accent-warm);
+  font-size: 0.9rem;
+  font-weight: 760;
+}
+
+.upcoming-note p {
+  max-width: 760px;
+  margin-bottom: 0.35rem;
+}
+
+.news-item {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 1.2rem;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.news-item time {
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 680;
+}
+
+.news-item p {
+  margin-bottom: 0.35rem;
+}
+
+.plain-action {
+  margin: 1.1rem 0 0;
+}
+
+.course-line {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr);
+  gap: 1.1rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.course-line:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.course-line > span {
+  color: var(--accent-warm);
+  font-size: 0.9rem;
+  font-weight: 760;
+}
+
+.course-line p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.page-hero {
+  padding: clamp(3rem, 7vw, 5.5rem) 0 clamp(2rem, 5vw, 3.5rem);
+}
+
+.page-hero h1 {
+  margin-bottom: 1.2rem;
+}
+
+.page-intro {
+  max-width: 760px;
+  color: #30342e;
+  font-size: clamp(1.02rem, 1.7vw, 1.14rem);
+}
+
+.research-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem 1rem;
+  padding-bottom: 2rem;
+}
+
+.research-nav a {
+  color: var(--muted);
+  font-size: 0.92rem;
+  text-decoration: none;
+}
+
+.research-nav a:hover {
+  color: var(--ink);
+}
+
+.research-program h2 {
+  margin-bottom: 1.15rem;
+}
+
+.research-program > p {
+  max-width: 780px;
+  color: #30342e;
+  font-size: 1.02rem;
+}
+
+.related-work {
+  max-width: 780px;
+  margin-top: 1.7rem;
+}
+
+.related-work h3 {
+  margin-bottom: 0.5rem;
+}
+
+.related-work li {
+  padding: 1rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.related-work li:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.related-work strong,
+.related-work span {
+  display: block;
+}
+
+.related-work span {
+  color: var(--muted);
+}
+
+.work-links {
+  margin-top: 0.35rem;
+}
+
+.fact-list {
+  max-width: 760px;
+  margin: 0;
+}
+
+.fact-list div {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: 1rem;
+  padding: 0.95rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.fact-list div:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.fact-list dt {
+  color: var(--accent);
+  font-weight: 760;
+}
+
+.fact-list dd {
+  margin: 0;
+}
+
+.plain-list {
+  max-width: 760px;
+  border-top: 1px solid var(--line);
+}
+
+.plain-list li {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.48fr) minmax(0, 1fr);
+  gap: 1rem;
+  padding: 0.95rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.plain-list span {
+  color: var(--muted);
+}
+
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 760px;
+}
+
+.two-column p {
+  color: var(--muted);
+}
+
+.site-footer {
+  margin-top: 2rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+}
+
+.footer-shell {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.4rem 0;
+  font-size: 0.92rem;
+}
+
+.footer-shell p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 760px) {
+  .nav-shell {
+    min-height: auto;
+    padding: 0.75rem 0;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+
+  .nav-links {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 0.1rem;
+  }
+
+.intro {
+    grid-template-columns: 1fr;
+}
+
+.intro-copy,
+.news-item > div,
+.course-line > div,
+.related-work li {
+  min-width: 0;
+}
+
+  .intro-avatar {
+    width: 96px;
+    height: 96px;
+  }
+
+  .news-item,
+  .course-line,
+  .fact-list div,
+  .plain-list li,
+  .two-column {
+    grid-template-columns: 1fr;
+  }
+
+  .news-item {
+    gap: 0.35rem;
+  }
+
+  .footer-shell {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 420px) {
+  .section-shell,
+  .nav-shell {
+    width: min(100% - 48px, var(--max));
+  }
+
+  .nav-links {
+    gap: 0.85rem;
+  }
+}
