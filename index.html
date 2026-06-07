@@ -30,7 +30,17 @@
 
     <main id="main">
       <section class="intro section-shell">
-        <img class="intro-photo" src="tianyi1.jpeg" alt="Tianyi Ni">
+        <figure class="intro-figure">
+          <img
+            id="intro-photo"
+            class="intro-photo"
+            src="tianyi1.jpeg"
+            alt="Tianyi Ni at The Ohio State Reformatory, Mansfield, OH"
+          >
+          <figcaption id="intro-location">
+            Location: The Ohio State Reformatory, Mansfield, OH
+          </figcaption>
+        </figure>
         <div class="intro-copy">
           <p class="kicker">PROSODIC PHONOLOGY · SOUND CHANGE · MODELING</p>
           <h1>Tianyi Ni</h1>
@@ -234,5 +244,50 @@
         </p>
       </div>
     </footer>
+
+    <script>
+      const introPhotos = [
+        {
+          src: "tianyi1.jpeg",
+          location: "The Ohio State Reformatory, Mansfield, OH",
+          position: "center"
+        },
+        {
+          src: "photos/reynisfjara-beach.jpeg",
+          location: "Reynisfjara Beach, Iceland",
+          position: "68% center"
+        },
+        {
+          src: "photos/cite-architecture-patrimoine.jpeg",
+          location: "Cité de l’architecture et du patrimoine, Paris, France",
+          position: "center"
+        },
+        {
+          src: "photos/stavanger-norway.jpeg",
+          location: "Stavanger, Norway",
+          position: "center"
+        },
+        {
+          src: "photos/museum-katowice.jpeg",
+          location: "Museum of Katowice, Katowice, Poland",
+          position: "center"
+        },
+        {
+          src: "photos/mozart-geburtshaus.jpeg",
+          location: "Mozart Geburtshaus, Salzburg, Austria",
+          position: "center"
+        }
+      ];
+
+      const selectedPhoto =
+        introPhotos[Math.floor(Math.random() * introPhotos.length)];
+      const introPhoto = document.getElementById("intro-photo");
+      const introLocation = document.getElementById("intro-location");
+
+      introPhoto.src = selectedPhoto.src;
+      introPhoto.alt = `Tianyi Ni at ${selectedPhoto.location}`;
+      introPhoto.style.objectPosition = selectedPhoto.position;
+      introLocation.textContent = `Location: ${selectedPhoto.location}`;
+    </script>
   </body>
 </html>
