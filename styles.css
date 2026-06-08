@@ -510,7 +510,15 @@ h3 {
 }
 
 .work-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem 1.25rem;
+  align-items: center;
   margin-top: 0.35rem;
+}
+
+.related-work .work-links span {
+  display: inline;
 }
 
 .fact-list {
