@@ -527,6 +527,13 @@ h3 {
   margin-top: 0.35rem;
 }
 
+.related-work .work-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.6rem;
+  align-items: center;
+}
+
 .related-work .work-links a,
 .related-work .work-links span {
   display: inline-flex;
