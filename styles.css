@@ -148,7 +148,8 @@ a:hover {
 .intro-photo-frame {
   display: block;
   width: 188px;
-  height: 251px;
+  height: 188px;
+  aspect-ratio: 1 / 1;
   border-radius: 6px;
   background: var(--soft);
   contain: paint;
@@ -688,7 +689,7 @@ h3 {
 
   .intro-photo-frame {
     width: 136px;
-    height: 181px;
+    height: 136px;
   }
 
   .lead,
