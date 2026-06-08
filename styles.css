@@ -244,6 +244,7 @@ h3 {
 }
 
 .inline-links a,
+.inline-links .plain-email,
 .news-links a,
 .work-links a,
 .item-links a {
@@ -254,7 +255,8 @@ h3 {
   gap: 0.5rem;
 }
 
-.inline-links a {
+.inline-links a,
+.inline-links .plain-email {
   display: inline-flex;
   min-height: 32px;
   align-items: center;
@@ -264,7 +266,15 @@ h3 {
   background: rgba(255, 255, 255, 0.42);
   color: var(--accent);
   line-height: 1;
+}
+
+.inline-links a {
   text-decoration: none;
+}
+
+.inline-links .plain-email {
+  color: var(--muted);
+  font-weight: 650;
 }
 
 .inline-links a:hover {
